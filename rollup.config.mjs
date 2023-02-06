@@ -4,7 +4,10 @@ import replace from '@rollup/plugin-replace'
 
 export default [{
   input: './src/y-webrtc/src/y-webrtc.js',
-  external: id => /^(yjs)/.test(id),
+  external: [
+    id => /^(yjs)/.test(id),
+    id => /^(Peer\.js)/.test(id)
+  ],
   output: {
     name: 'Y-WEBRTC',
     file: './src/es/y-p2pt.js',
@@ -16,7 +19,8 @@ export default [{
     nodeResolve(),
     replace({
       values: {
-        'yjs': 'yjs.js'
+        'yjs': 'yjs.js',
+        'simple-peer/simplepeer.min.js': 'Peer.js'
       }
     })
   ]

@@ -29,7 +29,7 @@ export default [{
     replace({
       values: {
         'yjs': 'yjs.js',
-        'simple-peer/simplepeer.min.js': '../../es/p2pt.js'
+        'simple-peer/simplepeer.min.js': '../../es/Peer.js'
       }
     })
   ]

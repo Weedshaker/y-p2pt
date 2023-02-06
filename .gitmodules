@@ -1,0 +1,3 @@
+[submodule "src/y-webrtc"]
+	path = src/y-webrtc
+	url = https://github.com/yjs/y-webrtc.git

@@ -14,7 +14,8 @@ export default [{
 {
   input: './src/y-webrtc/src/y-webrtc.js',
   external: [
-    id => /^(yjs)/.test(id)
+    id => /^(yjs)/.test(id),
+    id => /^(simple-peer)/.test(id)
   ],
   output: {
     name: 'Y-WEBRTC',
@@ -28,7 +29,7 @@ export default [{
     replace({
       values: {
         'yjs': 'yjs.js',
-        'simple-peer/simplepeer.min.js': '../../es/Peer.js'
+        'simple-peer/simplepeer.min.js': '../../es/p2pt.js'
       }
     })
   ]

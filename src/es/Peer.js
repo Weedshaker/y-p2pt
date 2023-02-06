@@ -2,6 +2,8 @@
 
 import P2PT from './p2pt.js'
 
+// DONT SHIM try to do this properly https://github.com/yjs/y-webrtc/blob/6460662715a89b4c70b88f4dad16676f736e2498/src/y-webrtc.js#L552
+
 /**
  * Peer is a recognized by https://github.com/yjs/y-webrtc/blob/master/src/y-webrtc.js#L16 as a https://github.com/feross/simple-peer
  * this class acts as a shim between https://github.com/subins2000/p2pt and https://github.com/feross/simple-peer

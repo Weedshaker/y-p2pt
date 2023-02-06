@@ -1,4 +1,4 @@
-import * as Y from './yjs.js';
+import * as Y from 'yjs.js';
 
 /**
  * Utility module to work with key-value stores.

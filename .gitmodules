@@ -1,3 +1,6 @@
 [submodule "src/y-webrtc"]
 	path = src/y-webrtc
 	url = https://github.com/yjs/y-webrtc.git
+[submodule "src/p2pt"]
+	path = src/p2pt
+	url = https://github.com/subins2000/p2pt.git

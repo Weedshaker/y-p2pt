@@ -12,13 +12,12 @@ export default [{
   }
 },
 {
-  input: './src/y-webrtc/src/y-webrtc.js',
+  input: './src/es/P2ptProvider.js',
   external: [
-    id => /^(yjs)/.test(id),
-    id => /^(simple-peer)/.test(id)
+    id => /^(yjs)/.test(id)
   ],
   output: {
-    name: 'Y-WEBRTC',
+    name: 'Y-P2PT',
     file: './src/es/y-p2pt.js',
     format: 'es',
     sourcemap: false
@@ -28,8 +27,7 @@ export default [{
     nodeResolve(),
     replace({
       values: {
-        'yjs': 'yjs.js',
-        'simple-peer/simplepeer.min.js': '../../es/Peer.js'
+        'yjs': 'yjs.js'
       }
     })
   ]

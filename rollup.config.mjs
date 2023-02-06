@@ -3,10 +3,18 @@ import commonjs from '@rollup/plugin-commonjs'
 import replace from '@rollup/plugin-replace'
 
 export default [{
+  input: './src/p2pt/dist/p2pt.umd.js',
+  output: {
+    name: 'P2PT',
+    file: './src/es/p2pt.js',
+    format: 'es',
+    sourcemap: false
+  }
+},
+{
   input: './src/y-webrtc/src/y-webrtc.js',
   external: [
-    id => /^(yjs)/.test(id),
-    id => /^(Peer\.js)/.test(id)
+    id => /^(yjs)/.test(id)
   ],
   output: {
     name: 'Y-WEBRTC',
@@ -20,7 +28,7 @@ export default [{
     replace({
       values: {
         'yjs': 'yjs.js',
-        'simple-peer/simplepeer.min.js': 'Peer.js'
+        'simple-peer/simplepeer.min.js': '../../es/Peer.js'
       }
     })
   ]

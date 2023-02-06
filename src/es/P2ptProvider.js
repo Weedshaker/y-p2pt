@@ -1,7 +1,7 @@
 // @ts-check
 
 import * as Y from 'yjs'
-import P2PT from './p2pt.js'
+import P2PT from '../p2pt/dist/p2pt.umd.js'
 import * as encoding from '../y-webrtc/node_modules/lib0/encoding.js'
 import * as decoding from '../y-webrtc/node_modules/lib0/decoding.js'
 import * as math from '../y-webrtc/node_modules/lib0/math.js'

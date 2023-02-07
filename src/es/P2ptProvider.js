@@ -30,13 +30,15 @@ export class P2ptProvider {
       peerOpts = {} // simple-peer options. See https://github.com/feross/simple-peer#peer--new-peeropts
     } = {}
   ) {
-      console.log('constructor', {roomName, doc, signaling, password, awareness, P2PT, Y});
-      this.awareness = awareness
+    this.awareness = awareness;
+    this.p2pt = new P2PT(signaling, roomName)
+    console.log('constructor', {roomName, doc, signaling, password, awareness, P2PT: this.p2pt, Y});
+
       
     // https://github.com/subins2000/p2pt/blob/master/api-docs.md#new-p2ptannounceurls---identifierstring--
     // TODO: start p2pt
 
-    // https://github.com/yjs/y-webrtc/blob/6460662715a89b4c70b88f4dad16676f736e2498/src/y-webrtc.js#L564
+    // https://github.com/yjs.js/y-webrtc/blob/6460662715a89b4c70b88f4dad16676f736e2498/src/y-webrtc.js#L564
     // TODO: catch all awareness events and handle them through p2pt
   }
 }

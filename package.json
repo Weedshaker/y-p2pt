@@ -5,7 +5,7 @@
   "scripts": {
     "fix": "standard --fix",
     "serve": "five-server --port=3000 --host=localhost --no-css-inject",
-    "build": "rm -rf ./src/es/y-p2pt.js && rm -rf ./src/es/p2pt.js && rollup -c"
+    "build": "rm -rf ./src/es/y-p2pt.js && rm -rf ./src/es/p2pt.js && rollup -c -w"
   },
   "author": "weedshaker@gmail.com",
   "license": "MIT",
@@ -14,7 +14,6 @@
     "rollup": "*",
     "@rollup/plugin-node-resolve": "*",
     "@rollup/plugin-commonjs": "*",
-    "@rollup/plugin-replace": "*",
     "standard": "*"
   },
   "standard": {

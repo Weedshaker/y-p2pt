@@ -217,7 +217,7 @@ export class P2ptProvider {
       case 'messageQueryAwareness':
         encoding.writeVarUint(encoder, messageType)
         encoding.writeVarUint8Array(encoder, awarenessProtocol.encodeAwarenessUpdate(this.awareness, Array.from(this.awareness.getStates().keys())))
-        sendReply = true
+        //sendReply = true // too many messages, something is missing to make awareness settle
         break
       case 'messageAwareness':
         awarenessProtocol.applyAwarenessUpdate(this.awareness, decoding.readVarUint8Array(decoder), this)
